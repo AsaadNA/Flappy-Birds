@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Flappy Birds</title>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <style type="text/css">
+      @font-face {
+         font-family: header-font;
+         src: url('../res/FlappyBirdy.ttf');
+      }
+
+      * {
+         box-sizing: border-box;
+         padding: 0px;
+         margin: 0px;
+      }
+
+      body {
+         color:black;
+         background-color: rgb(218, 218, 218);
+      }
+
+      .container {
+         width: 80%;
+         margin: 0px auto;
+      }
+
+      header h1 {
+         padding: 60px;
+         font-size: 90px;
+         text-align: center;
+         font-family: header-font;
+      }
+
+      .flex {
+         display: flex;
+         justify-content: center;
+         align-content: center;
+      }
+
+   </style>
+</head>
+<body>
+   <header class="container">
+      <h1>Flappy Birds</h1>
+   </header>
+   <main class="container flex"></main>
+   <script src="./js/player.js"></script>
+   <script src="./js/level.js"></script>
+   <script src="./js/flappy.js"></script>
+</body>
+</html>

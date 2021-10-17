@@ -1,0 +1,31 @@
+{
+   "frames": [
+      {
+         "name": "sprite-1",
+         "position": {
+            "x": 0,
+            "y": 0,
+            "w": 49,
+            "h": 35
+         }
+      },
+      {
+         "name": "sprite-2",
+         "position": {
+            "x": 50,
+            "y": 0,
+            "w": 49,
+            "h": 35
+         }
+      },
+      {
+         "name": "sprite-3",
+         "position": {
+            "x": 100,
+            "y": 0,
+            "w": 49,
+            "h": 35
+         }
+      }
+   ]
+}
