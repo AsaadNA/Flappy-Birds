@@ -6,7 +6,7 @@
    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
    <style type="text/css">
       @font-face {
-         font-family: header-font;
+         font-family: flappy-font;
          src: url('../res/FlappyBirdy.ttf');
       }
 
@@ -17,6 +17,7 @@
       }
 
       body {
+         font-family: header-font;
          color:black;
          background-color: rgb(218, 218, 218);
       }
@@ -26,12 +27,21 @@
          margin: 0px auto;
       }
 
+      header {
+         padding: 50px;
+      }
+
       header h1 {
-         padding: 60px;
+         font-family: flappy-font;
          font-size: 90px;
          text-align: center;
-         font-family: header-font;
       }
+
+      ul {
+         font-size: 20px;
+         list-style-type: square;
+      }
+
 
       .flex {
          display: flex;
@@ -44,8 +54,13 @@
 <body>
    <header class="container">
       <h1>Flappy Birds</h1>
+      <ul style="margin-top:30px; text-align: center;">
+         <li>Press Space to start / jump</li>
+         <li>Press F1 to toggle debug mode</li>
+      </ul>
    </header>
    <main tabindex=0 class="container flex"></main>
+   <script src="./js/utils.js"></script>
    <script src="./js/pipe.js"></script>
    <script src="./js/player.js"></script>
    <script src="./js/level.js"></script>
