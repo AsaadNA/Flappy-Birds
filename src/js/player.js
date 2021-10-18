@@ -4,17 +4,21 @@ let windowHeight = 650;
 class Player {
 
    constructor() {
-      this.x = 10;
+      this.x = 40;
       this.y = windowHeight/2;
 
       this.animation = [];
       this.playerAnimationIndex = 0;
       this.playerAnimationSpeed = 0.2;
+
+      this.gravity = 0.6;
+      this.velocity = 0.0;
+      this.lift = 9.8;
    }
 
    preload() {
       this.playerSprite = loadImage("../res/bird.png");
-      this.playerAnimationData = loadJSON('playerAnimation.json');
+      this.playerAnimationData = loadJSON('./js/data/playerAnimation.json');
    }
 
    setup() {
@@ -26,9 +30,17 @@ class Player {
       }
   }
 
+  keyPressed() {
+     if(keyCode === 32) {
+        this.velocity -= this.lift;
+     }
+  }
+
    update() {
       this.playerAnimationIndex += this.playerAnimationSpeed;
-   }
+      this.velocity += this.gravity;
+      this.y += this.velocity;
+    }
 
    render() {
       let index = floor(this.playerAnimationIndex) % this.animation.length;

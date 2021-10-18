@@ -10,6 +10,10 @@ function setup() {
   level.setup();
 }
 
+function keyPressed() {
+   level.keyPressed();
+}
+
 function draw() {
    level.update();
    level.render();
